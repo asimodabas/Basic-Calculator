@@ -28,6 +28,23 @@ class MainActivity : AppCompatActivity() {
             val carpma = sayi1*sayi2
             textViewSonuc.text = carpma.toString()
         }
+        buttonBolme.setOnClickListener {
+            val  alinanSayi1 = editTextSayi1.text.toString()
+            val  alinanSayi2 = editTextSayi2.text.toString()
+            val sayi1 = alinanSayi1.toInt()
+            val sayi2 = alinanSayi2.toInt()
 
+            val bolme = sayi1/sayi2
+            textViewSonuc.text = bolme.toString()
+        }
+            buttonCıkarma.setOnClickListener {
+                val  alinanSayi1 = editTextSayi1.text.toString()
+                val  alinanSayi2 = editTextSayi2.text.toString()
+                val sayi1 = alinanSayi1.toInt()
+                val sayi2 = alinanSayi2.toInt()
+
+                val cıkarma = sayi1-sayi2
+                textViewSonuc.text = cıkarma.toString()
+            }
     }
 }
