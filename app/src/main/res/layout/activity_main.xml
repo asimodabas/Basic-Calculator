@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="Sayı 2"
+        android:hint="Number 2"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:ems="10"
-        android:hint="Sayı 1"
+        android:hint="Number 1"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,48 +49,50 @@
 
     <Button
         android:id="@+id/buttonToplama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="148dp"
-        android:text="Toplama"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="77dp"
+        android:backgroundTint="#000000"
+        android:text="Collection"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonCıkarma" />
 
     <Button
         android:id="@+id/buttonCarpma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="148dp"
-        android:text="Çarpma"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="31dp"
+        android:backgroundTint="#000000"
+        android:text="Impact"
+        app:layout_constraintBottom_toTopOf="@+id/buttonToplama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonBolme" />
 
     <Button
         android:id="@+id/buttonCıkarma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:text="Çıkarma"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="77dp"
+        android:backgroundTint="#000000"
+        android:text="Extraction"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonToplama"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonToplama"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/buttonBolme"
-        android:layout_width="103dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="44dp"
-        android:text="Bölme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.965"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCarpma"
-        app:layout_constraintVertical_bias="0.059" />
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="31dp"
+        android:backgroundTint="#000000"
+        android:text="Divide"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCıkarma"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCarpma"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

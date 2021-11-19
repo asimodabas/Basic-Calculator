@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         buttonBolme.setOnClickListener {
             val  alinanSayi1 = editTextSayi1.text.toString()
             val  alinanSayi2 = editTextSayi2.text.toString()
-            val sayi1 = alinanSayi1.toInt()
-            val sayi2 = alinanSayi2.toInt()
+            val sayi1 = alinanSayi1.toInt().toFloat()
+            val sayi2 = alinanSayi2.toInt().toFloat()
 
             val bolme = sayi1/sayi2
             textViewSonuc.text = bolme.toString()
