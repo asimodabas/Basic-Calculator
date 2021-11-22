@@ -10,41 +10,56 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         textViewSonuc.text = "0"
-        buttonToplama.setOnClickListener {
-          val  alinanSayi1 = editTextSayi1.text.toString()
-          val  alinanSayi2 = editTextSayi2.text.toString()
-            val sayi1 = alinanSayi1.toInt()
-            val sayi2 = alinanSayi2.toInt()
 
-            val toplam = sayi1+sayi2
-            textViewSonuc.text = toplam.toString()
+        buttonToplama.setOnClickListener {
+            val alinanSayi1 = editTextSayi1.text.toString().toIntOrNull()
+            val alinanSayi2 = editTextSayi2.text.toString().toIntOrNull()
+
+            if (alinanSayi1 == null || alinanSayi2 == null) {
+
+                textViewSonuc.text = "Please Enter Number"
+            } else {
+                val toplam = alinanSayi1 + alinanSayi2
+                textViewSonuc.text = toplam.toString()
+            }
         }
         buttonCarpma.setOnClickListener {
-            val  alinanSayi1 = editTextSayi1.text.toString()
-            val  alinanSayi2 = editTextSayi2.text.toString()
-            val sayi1 = alinanSayi1.toInt()
-            val sayi2 = alinanSayi2.toInt()
+            val alinanSayi1 = editTextSayi1.text.toString().toIntOrNull()
+            val alinanSayi2 = editTextSayi2.text.toString().toIntOrNull()
 
-            val carpma = sayi1*sayi2
-            textViewSonuc.text = carpma.toString()
+            if (alinanSayi1 == null || alinanSayi2 == null) {
+
+                textViewSonuc.text = "Please Enter Number"
+            } else {
+                val carpma = alinanSayi1 * alinanSayi2
+                textViewSonuc.text = carpma.toString()
+            }
         }
         buttonBolme.setOnClickListener {
-            val  alinanSayi1 = editTextSayi1.text.toString()
-            val  alinanSayi2 = editTextSayi2.text.toString()
-            val sayi1 = alinanSayi1.toInt().toFloat()
-            val sayi2 = alinanSayi2.toInt().toFloat()
+            val alinanSayi1 = editTextSayi1.text.toString().toIntOrNull()
+            val alinanSayi2 = editTextSayi2.text.toString().toIntOrNull()
 
-            val bolme = sayi1/sayi2
-            textViewSonuc.text = bolme.toString()
-        }
-            buttonCıkarma.setOnClickListener {
-                val  alinanSayi1 = editTextSayi1.text.toString()
-                val  alinanSayi2 = editTextSayi2.text.toString()
-                val sayi1 = alinanSayi1.toInt()
-                val sayi2 = alinanSayi2.toInt()
+            if (alinanSayi1 == null || alinanSayi2 == null) {
 
-                val cıkarma = sayi1-sayi2
-                textViewSonuc.text = cıkarma.toString()
+                textViewSonuc.text = "Please Enter Number"
+            } else {
+                val bolme = alinanSayi1.toFloat() / alinanSayi2.toFloat()
+                textViewSonuc.text = bolme.toString()
             }
+
+
+        }
+        buttonCıkarma.setOnClickListener {
+            val alinanSayi1 = editTextSayi1.text.toString().toIntOrNull()
+            val alinanSayi2 = editTextSayi2.text.toString().toIntOrNull()
+
+            if (alinanSayi1 == null || alinanSayi2 == null) {
+
+                textViewSonuc.text = "Please Enter Number"
+            } else {
+                val cikarma = alinanSayi1 - alinanSayi2
+                textViewSonuc.text = cikarma.toString()
+            }
+        }
     }
 }
